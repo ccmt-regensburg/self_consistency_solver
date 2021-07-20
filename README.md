@@ -8,8 +8,8 @@ The Python modules in the folder /Modules/ contain different versions of a self-
 4. The KPM solver of "self_consistency_RandomTraceEvaluation_bdg.py" uses a Random Trace Evaluation approach but needs optimization to be practical.
 
 Installation (only necessary for 1. and 2.):
-1. In the folder "/chebyshev_matrixfree" in the file "chebyshev_final_icc_double.c" determine the linear dimension of the system with the variable N and the number threads with the variable NrndVec. Then execute make in folder "/chebyshev_matrixfree". The number of threads needs to be set accordingly in /Modules/self_consistency_MatrixFree_bdg.py. The number of threads Nthreads that will be used for full diagonalization solvers and the Hamiltonian rescaling can be set with MKL_NUM_THREADS=Nthreads and OMP_NUM_THREADS=Nthreads.
-2. In the folder "/chebyshev_matrix" execute make. The number of threads Nthreads can be set with MKL_NUM_THREADS=Nthreads and OMP_NUM_THREADS=Nthreads.
+1. In the folder "/chebyshev_matrixfree" in the file "chebyshev_final_icc_double.c" determine the linear dimension of the system with the variable N and the number threads with the variable NrndVec. Then execute make in folder "/chebyshev_matrixfree". The number of threads needs to be set accordingly in /Modules/self_consistency_MatrixFree_bdg.py. The number of threads Nthreads that will be used for full diagonalization solvers and the Hamiltonian rescaling can be set with MKL_NUM_THREADS=Nthreads and OMP_NUM_THREADS=Nthreads. Append /Modules to LD_LIBRARY_PATH.
+2. In the folder "/chebyshev_matrix" execute make. The number of threads Nthreads can be set with MKL_NUM_THREADS=Nthreads and OMP_NUM_THREADS=Nthreads. Append /Modules to LD_LIBRARY_PATH.
 
 Example job scripts are given with "start_self_consistency_solver.py" and "start_self_consistency_solver_MKL.py" for codes 1. and 2. respectively.
 
