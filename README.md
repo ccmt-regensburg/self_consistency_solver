@@ -4,7 +4,7 @@ Code written by Matthias Stosiek, if not otherwise stated.
 The Python modules in the folder /Modules/ contain different versions of a self-consistency solver all containing a full diagonalization (for number of moments Nm=0) and Kernel Polynomial Method solver (for Nm>0). The full diagonalization solver is the same in every module.
 
 1. The KPM solver of "self_consistency_MatrixFree_bdg.py" contains an optimized matrix-free sparse matrix product (written in C) that only works with TR- and PH- symmetric s-wave superconductors as outlined in our publication.
-2. The KPM solver of "self_consistency_MKL_bdg.py" contains a MKL sparse matrix product (python wrapper written by Dominik Hahn) that can be used for any Hamiltonian. To use this solver for a different system than the implemented one, the self-consistency equations, Hamiltonian and details of the polynomial expansion have to be adjusted.
+2. The KPM solver of "self_consistency_MKL_bdg.py" contains a MKL sparse matrix product (python wrapper and polynomial expansion written by Dominik Hahn) that can be used for any Hamiltonian. To use this solver for a different system than the implemented one, the self-consistency equations, Hamiltonian and details of the polynomial expansion have to be adjusted.
 3. The KPM solver of "self_consistency_AllInPython_bdg.py" is written entirely in Python but very slow for that reason.
 4. The KPM solver of "self_consistency_RandomTraceEvaluation_bdg.py" uses a Random Trace Evaluation approach but needs optimization to be practical.
 
