@@ -16,7 +16,7 @@ Example job scripts are given with "start_self_consistency_solver.py" and "start
 Start the script with:
 python start_self_consistency_solver.py folder startfile system_size
 
-In "folder" the self-consistent-fields will be written and read in every step. If the code has been stoppen before self-consistency was reached, it automatically restarts at the most recent iteration, if "folder" contains a file with the correct parameters and filename.
+In "folder" the self-consistent-fields will be written and read in every step. If the code has been stoppen before self-consistency was reached, it automatically restarts at the most recent iteration, if "folder" contains a file with the correct parameters and filename. Each file is designated a separate random number seed. In the same file a close parameter configuration (in temperature, interaction strength, disorder strenght, number of Chebyshev moments or particle density) is searched for as a starting guess for the self-consistency solver.
 With "startfile" the first numbered suffix of the output filenames is defined. All the following output files will be numbered as defined in the script.
 "system_size" defines the linear system size of the square lattice
 
