@@ -1,0 +1,1 @@
+void mychebyshev(double* restrict onsite, double* restrict pairing, double* restrict randvec, int randvec_nonzero, int Nmoments, double hopping, double* restrict onsite_new, double* restrict pairing_new);
