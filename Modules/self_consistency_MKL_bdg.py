@@ -442,16 +442,17 @@ def rescaleArray(ham, delta_i, onsite, eps=0.1):
 
         emax = np.real(arp.eigsh(ham, k=1,
                 which='LA',return_eigenvectors=False,maxiter=100000, tol=5.0e-4))[0]
-        emin=np.float64(-emax)
+        emin=np.real(arp.eigsh(ham, k=1,
+                which='SA',return_eigenvectors=False,maxiter=100000, tol=5.0e-4))[0]
 
         a = (emax - emin)/(2.0-eps)
-#       b = (emax + emin)/2.0
+        b = (emax + emin)/2.0
 
-#       onsite=(onsite-b)/a
-        onsite=onsite/a
+        onsite=(onsite-b)/a
+#        onsite=onsite/a
         pairing=delta_i/a
 
-        ham_rescaled=ham/a
+        ham_rescaled=(ham-sps.eye(ndim)*b)/a
 
         return onsite, pairing, np.float64(1./a), emax, ham_rescaled    
 
