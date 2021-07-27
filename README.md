@@ -18,6 +18,7 @@ We have applied the self-consistency solver to various problems in disordered su
 Example job scripts are given with "start_self_consistency_solver.py" and "start_self_consistency_solver_MKL.py" for codes 1. and 2. respectively.
 
 Start the script with:
+    
     python start_self_consistency_solver.py folder startfile system_size
 
 In "folder" the self-consistent-fields will be written and read in every step. If the code has been stoppen before self-consistency was reached, it automatically restarts at the most recent iteration, if "folder" contains a file with the correct parameters and filename. Each file is designated a separate random number seed. In the same file a close parameter configuration (in temperature, interaction strength, disorder strenght, number of Chebyshev moments or particle density) is searched for as a starting guess for the self-consistency solver.
