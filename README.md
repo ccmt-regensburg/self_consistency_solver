@@ -1,5 +1,5 @@
 # self_consistency_solver
-Contact: Matthias Stosiek (main developer), Department of Physics, Sophia University, stosiek@sophia.ac.jp
+Contact: Matthias Stosiek, Department of Applied Physics, Aalto University, matthias.stosiek@aalto.fi
 
 The Python modules in the folder /Modules/ contain different versions of a self-consistency solver all containing a full diagonalization (for number of moments Nm=0) and Kernel Polynomial Method solver (for Nm>0). The full diagonalization solver is the same in every module.
 
