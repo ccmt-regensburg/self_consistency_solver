@@ -9,12 +9,16 @@ if __name__=="__main__":
 
         dtype=np.float64
 
+        #n is the filling factor
         n=np.float64(0.3)
 
+        #W is the disorder strength
         Warr=[100, 250, 400]
 
+        #U is the interaction strength
         Uarr=[220]
-        
+
+        #T is the temperature
         Tarr={}
         Tarr[0.5]={}
         Tarr[1.0]={}
@@ -47,6 +51,7 @@ if __name__=="__main__":
 #       Tarr[10.0][1.8]=np.array([0.0, 0.04, 0.08, 0.012, 0.018, 0.024, 0.048, 0.062])
 #       Tarr[10.0][1.5]=np.array([0.0, 0.01, 0.02])
 
+        #Nm is the number of Chebyshev moments
         Nmarr={}
         
         for U in Uarr:
