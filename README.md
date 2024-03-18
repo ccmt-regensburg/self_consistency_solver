@@ -8,7 +8,11 @@ The Python modules in the folder /Modules/ contain different versions of a self-
 3. The KPM solver of "self_consistency_AllInPython_bdg.py" is written entirely in Python but very slow for that reason.
 4. The KPM solver of "self_consistency_RandomTraceEvaluation_bdg.py" uses a Random Trace Evaluation approach but needs optimization to be practical.
 
-We have applied the self-consistency solver to various problems in disordered superconductors, see M. Stosiek, B. Lang, and F. Evers, Phys. Rev. B 101, 144503; arXiv:2107.06728; arXiv:2107.01646.
+We have applied the self-consistency solver to various problems in disordered superconductors, see
+M. Stosiek, B. Lang, and F. Evers, Phys. Rev. B 101, 144503 (2020)
+M. Stosiek, F. Evers, and I. S. Burmistrov, Phys. Rev. Research 3, L042016 (2021)
+M. Stosiek, C. Baretzky, T. Balashov, F. Evers, and W. Wulfhekel, Phys. Rev. B 105, L140504 (2022)
+M. Lizée, M. Stosiek, I. Burmistrov, T. Cren, and C. Brun, Phys. Rev. B 107, 174508 (2023)
 
 # Compilation (only necessary for 1. and 2.)
 1. In the folder "/chebyshev_matrixfree" in the file "chebyshev_final_icc_double.c" determine the linear dimension of the system with the variable N and the number threads with the variable NrndVec. Then execute make in folder "/chebyshev_matrixfree". The number of threads needs to be set accordingly in /Modules/self_consistency_MatrixFree_bdg.py. The number of threads Nthreads that will be used for full diagonalization solvers and the Hamiltonian rescaling can be set with MKL_NUM_THREADS=Nthreads and OMP_NUM_THREADS=Nthreads. Append /Modules to LD_LIBRARY_PATH.
