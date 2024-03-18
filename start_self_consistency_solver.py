@@ -12,10 +12,10 @@ if __name__=="__main__":
         #n is the filling factor
         n=np.float64(0.3)
 
-        #W is the disorder strength
+        #W/100 is the disorder strength
         Warr=[100, 250, 400]
 
-        #U is the interaction strength
+        #U/100 is the interaction strength
         Uarr=[220]
 
         #T is the temperature
